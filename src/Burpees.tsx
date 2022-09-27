@@ -1,5 +1,5 @@
 const LOCALE = "en-nz";
-const OPTIONS = {
+const OPTIONS: Intl.DateTimeFormatOptions = {
   weekday: "long",
   year: "numeric",
   month: "short",
@@ -26,7 +26,7 @@ export function Burpees(props: BurpeesProps) {
     <>
       <h1>Burpee Challenge</h1>
       <small>
-        Starting {start.toLocaleString(LOCALE, OPTIONS)},
+        Starting {start.toLocaleDateString(LOCALE, OPTIONS)},
         +1 burpee each day for {numDays} days.<br/>
       </small>
 
